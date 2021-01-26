@@ -1,0 +1,18 @@
+<%- include ('./includes/head.ejs') %>  
+       <div class="form-group">
+            <div class="mx-auto w-50 mb-3 mt-3 alert alert-dark">
+                <h2>کارهای روزمره</h2>
+            </div>
+
+        <%- include ('./includes/form.ejs')  %>
+
+            <div class="mx-auto w-50 mb-3 alert alert-warning row">
+                <p class="d-inline col">کارهای انجام شده : <span class="badge badge-success badge-pill"><%= completedTodos %></span></p>
+                <p class="d-inline col">کارهای باقی مانده امروز : <span class="badge badge-warning badge-pill"><%= remainingTodos %></span></p>
+            </div>
+            <div class="mx-auto w-50 mb-3 mt-3 alert alert-dark pb-1 alert alert-secondary">
+                <p>لیست کارهایی که باید انجام بدی رو این زیر نشون می دم</p>
+            </div>
+            <%- include ('./includes/condition.ejs') %> 
+        </div>
+ <%- include ('./includes/footer.ejs') %> 
